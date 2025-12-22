@@ -21,8 +21,6 @@
   cups,
   dbus,
   pango,
-  openssl,
-  glib-networking,
   libpulseaudio,
   libbsd,
   coreutils,
@@ -86,11 +84,8 @@ stdenv.mkDerivation {
     xorg.libXxf86vm
     libpulseaudio
     libbsd
-    openssl
-    glib-networking
   ];
 
-  # Official package uses this to prevent Qt conflicts
   dontWrapQtApps = true;
 
   runtimeDependencies = [
@@ -128,6 +123,8 @@ stdenv.mkDerivation {
     for i in $out/bin/*; do
       substituteInPlace $i \
         --replace "/opt/kingsoft/wps-office" "$out/opt/kingsoft/wps-office"
+      substituteInPlace $i \
+        --replace-fail '[ $haveConf -eq 1 ] &&' '[ ! $currentMode ] ||'
     done
 
     # Fixup desktop files
