@@ -23,6 +23,8 @@
   pango,
   libpulseaudio,
   libbsd,
+  freetype,
+  fontconfig,
   coreutils,
 }:
 
@@ -84,6 +86,8 @@ stdenv.mkDerivation {
     xorg.libXxf86vm
     libpulseaudio
     libbsd
+    freetype
+    fontconfig
   ];
 
   dontWrapQtApps = true;
@@ -108,7 +112,7 @@ stdenv.mkDerivation {
     # Remove problematic bundled libraries
     # Removing libstd++, libgcc_s, libnss, libdbus, libbz2, libjpeg to force system usage
     # Also removing broken plugins
-    rm -f opt/kingsoft/wps-office/office6/lib{peony-wpsprint-menu-plugin,bz2,jpeg,stdc++,gcc_s,odbc*,nss*,dbus-1,ssl,crypto}.so*
+    rm -f opt/kingsoft/wps-office/office6/lib{peony-wpsprint-menu-plugin,bz2,jpeg,stdc++,gcc_s,odbc*,nss*,dbus-1,ssl,crypto,freetype,fontconfig}.so*
   '';
 
   installPhase = ''
