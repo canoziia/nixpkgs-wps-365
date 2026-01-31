@@ -29,16 +29,16 @@
 }:
 
 let
-  version = "12.1.2.23578";
+  version = "12.1.2.24722";
 
   sources = {
     x86_64-linux = fetchurl {
-      url = "https://pubwps-wps365-obs.wpscdn.cn/download/Linux/23578/wps-office_12.1.2.23578.AK.preread.sw_542884_amd64.deb";
-      sha256 = "1v01d96amyb847y6ffhivbzxnmra2n2qclmq26pwzqhj0lasxd6g";
+      url = "https://pubwps-wps365-obs.wpscdn.cn/download/Linux/24722/wps-office_12.1.2.24722.AK.preread.sw_612423_amd64.deb";
+      hash = "sha256-aY4drb0vTfi9HO3N5LgB3GLZu9Ulg7dlBGtL+78FJIg=";
     };
     aarch64-linux = fetchurl {
-      url = "https://pubwps-wps365-obs.wpscdn.cn/download/Linux/23578/wps-office_12.1.2.23578.AK.preread.sw_542882_arm64.deb";
-      sha256 = "0b6mwn4xh1cchvcsh9sijx5xrk1bb3dhs3zsc38s9vxgdhsx74a9";
+      url = "https://pubwps-wps365-obs.wpscdn.cn/download/Linux/24722/wps-office_12.1.2.24722.AK.preread.sw_612444_arm64.deb";
+      sha256 = "0ycgxqf1b44n2swad8bqaf3wyxq186vmxgqxqm93dcsdih870mdi";
     };
   };
 
