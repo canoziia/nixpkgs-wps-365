@@ -25,6 +25,7 @@
   libbsd,
   freetype,
   fontconfig,
+  libtiff,
   coreutils,
 }:
 
@@ -70,24 +71,25 @@ stdenv.mkDerivation {
     libusb1
     unixODBC
     qt5.qtbase
-    xorg.libXdamage
+    libxdamage
     xorg.libXtst
     xorg.libXv
-    xorg.libX11
-    xorg.libXext
-    xorg.libxcb
-    xorg.libXcomposite
+    libx11
+    libxext
+    libxcb
+    libxcomposite
     xorg.libXcursor
-    xorg.libXfixes
+    libxfixes
     xorg.libXi
-    xorg.libXrandr
+    libxrandr
     xorg.libXrender
     xorg.libXScrnSaver
     xorg.libXxf86vm
     libpulseaudio
     libbsd
     freetype
-    fontconfig
+    fontconfig,
+    libtiff
   ];
 
   dontWrapQtApps = true;
