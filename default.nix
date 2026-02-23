@@ -101,7 +101,7 @@ stdenv.mkDerivation {
     libpulseaudio
     libbsd
     freetype
-    fontconfig,
+    fontconfig
     libtiff
   ];
 
