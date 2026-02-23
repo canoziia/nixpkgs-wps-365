@@ -72,19 +72,19 @@ stdenv.mkDerivation {
     unixODBC
     qt5.qtbase
     libxdamage
-    xorg.libXtst
-    xorg.libXv
+    libxtst
+    libxv
     libx11
     libxext
     libxcb
     libxcomposite
-    xorg.libXcursor
+    libxcursor
     libxfixes
-    xorg.libXi
+    libxi
     libxrandr
-    xorg.libXrender
-    xorg.libXScrnSaver
-    xorg.libXxf86vm
+    libxrender
+    libxscrnsaver
+    libxxf86vm
     libpulseaudio
     libbsd
     freetype
