@@ -14,7 +14,7 @@
   gtk3,
   libgbm,
   libusb1,
-  unixODBC,
+  unixodbc,
   libmysqlclient,
   qt5,
   libx11,
@@ -82,7 +82,7 @@ stdenv.mkDerivation {
     gtk3
     libgbm
     libusb1
-    unixODBC
+    unixodbc
     qt5.qtbase
     libxdamage
     libxtst
